@@ -14,6 +14,7 @@ export const Keys = keyframes`
 
 const Globs = createGlobalStyle`
   svg:nth-of-type(1) {
+    transition: 2s;
     animation: ${Keys} 2s linear infinite;
   }
 `;

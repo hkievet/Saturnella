@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ReactComponent as Hearts } from "../../assets/bad_heart_vertical_pattern.svg";
 import styled, { css } from "styled-components";
-import { Keys } from "./WeirdRotateAnimation";
+import { Keys } from "../hksvg/WeirdRotateAnimation";
 
 const animationProperty = css`
   animation: ${Keys} 2s linear infinite;

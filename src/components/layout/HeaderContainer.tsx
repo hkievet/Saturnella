@@ -1,5 +1,5 @@
 import * as React from "react";
-import Animation from "./Animation";
+import Animation from "../hksvg/Animation";
 import styled from "styled-components";
 
 const HeaderContainer = styled.button`

@@ -1,12 +1,13 @@
 import * as React from "react";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
-import VerticalBarSVG from "./VerticalBarSVG";
-import PatternSVG, { Square } from "./Square";
-import Animation from "./Animation";
-import ContainerBody from "./ContainerBody";
-import HeaderContainer from "./HeaderContainer";
-import GlobalStyles from "./GlobalStyles";
-import Globs from "./WeirdRotateAnimation";
+import VerticalBarSVG from "../layout/VerticalBarSVG";
+import PatternSVG, { Square } from "../hksvg/Square";
+import Animation from "../hksvg/Animation";
+import ContainerBody from "../layout/ContainerBody";
+import HeaderContainer from "../layout/HeaderContainer";
+import GlobalStyles from "../layout/GlobalStyles";
+import Globs from "../hksvg/WeirdRotateAnimation";
+import SvgSelectionMenu from "../hksvg/SvgSelectionMenu";
 //import PatternSvg from "../../assets/pattern-svg.inline";
 //import svgfileurl, {
 //ReactComponent as svgFile
@@ -49,6 +50,7 @@ export const App = () => {
       <ContainerBody>
         <VerticalBarSVG animated={isTriggered} />
         <VerticalColumn>
+          <SvgSelectionMenu />
           <TextSection>
             <p>
               This Page Requires a good browser (ie, not ie11. really, stop
