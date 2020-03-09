@@ -51,19 +51,22 @@ export const App = () => {
         <VerticalColumn>
           <TextSection>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              iste minus, a harum eveniet fuga vero in ducimus consequuntur
-              ullam magnam iusto voluptatum numquam tempore.
+              This Page Requires a good browser (ie, not ie11. really, stop
+              using it and supporting it if you can). Also, needs to be desktop
+              view (Who wants a cluttered screen on a mobile phone? Not me.)
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              iste minus, a harum eveniet fuga vero in ducimus consequuntur
-              ullam magnam iusto voluptatum numquam tempore.
+              (Click Saturnella above to spin the svg columns on either side.)
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              iste minus, a harum eveniet fuga vero in ducimus consequuntur
-              ullam magnam iusto voluptatum numquam tempore.
+              The SVG spec is hard. Exporting an penned path from Illustrator
+              into an svg and animating it liket his with React + Typescript +
+              Styled Components took a long time to figure out.
+            </p>
+            <p>
+              One of the hardest parts was getting WebPack to build things the
+              way I wanted. I used @svgr/webpack and disabled svgo. I can also
+              import the url of the svg by using url-loader.
             </p>
           </TextSection>
           <Square />
