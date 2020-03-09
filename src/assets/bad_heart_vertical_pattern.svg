@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120px">
+    <defs>
+        <pattern id="puzzle" width="120" height="120" patternUnits="userSpaceOnUse">
+            <path fill="white" d="M15.11 120.15c-9.37 0-15.54-7.71-15-15s5-14.78 15-15c11.22-.2 18 8.1 33.69 16.23 12.46 6.47 13.88-40.36 24.92-34.69C87.77 79 97.78 90.58 105 90.23s15-7.59 15-15.23a14.68 14.68 0 00-15-14.81 15 15 0 0015-15c-.14-7.27-7-15.2-15-15.27S86.55 40.37 72.86 47.7c-5.58 3-16.49-35.91-25.52-30.05-18.72 12.14-24.92 12.58-32.23 12.58C5 30.23.12 22.41.15 15a14.82 14.82 0 0115-15" fill="none" stroke="white" stroke-miterlimit="10"/>
+        </pattern>
+    </defs>
+    <rect fill="url(#puzzle)" stroke="black" width="100%" height="100%"></rect>
+</svg>
+

@@ -63,12 +63,24 @@ module.exports = {
       },
       {
         //  handle fonts in the scss loader
-        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        test: /\.(woff2?|ttf|otf|eot)$/,
         exclude: /node_modules/,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]"
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              SVGO: false
+            }
+          },
+          "url-loader"
+        ]
       }
     ]
   },
