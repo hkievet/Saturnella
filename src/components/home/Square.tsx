@@ -24,14 +24,14 @@ const SVGWrapperStyle = styled.div`
   fill: white;
   height: 120px;
   width: 120px;
-  margin: 0 auto;
+  margin: 24px auto;
 
   .squares_svg__cls-1 {
     animation: ${Animation} 2s linear infinite;
   }
 `;
 
-export const PatternSVG: React.FC<IPatternSVGProps> = props => {
+export const Square: React.FC<IPatternSVGProps> = props => {
   return (
     <SVGWrapperStyle>
       <Pattern />
@@ -39,4 +39,4 @@ export const PatternSVG: React.FC<IPatternSVGProps> = props => {
   );
 };
 
-export default PatternSVG;
+export default Square;

@@ -2,7 +2,7 @@ import * as React from "react";
 import Animation from "./Animation";
 import styled from "styled-components";
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.button`
   display: flex;
   max-width: 400px;
   margin: 0 auto;
@@ -14,6 +14,10 @@ const HeaderContainer = styled.div`
     cursor: pointer;
   }
   margin-top: 24px;
+
+  /**reset stuff */
+  background-color: black;
+  color: white;
 `;
 
 export interface IHeaderContainerProps {}
