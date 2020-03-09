@@ -5,3 +5,5 @@ todo:
 * fcboilerplate for styled components
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/83e86894-36c2-4a9b-8701-772b4861dafe/deploy-status)](https://app.netlify.com/sites/eager-clarke-6a698f/deploys)
+
+[Hosted on Netlify](https://eager-clarke-6a698f.netlify.com)
