@@ -11,15 +11,9 @@ export const App: React.FC<IAppProps> = props => {
   return (
     <React.Suspense fallback={<div>loading...</div>}>
       <Router history={createBrowserHistory()}>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
         <Switch>
           <Route path="/" component={LandingPage} />
         </Switch>
-        <footer>
-          <></>
-        </footer>
       </Router>
     </React.Suspense>
   );
