@@ -79,7 +79,12 @@ module.exports = {
               SVGO: false
             }
           },
-          "url-loader"
+          {
+            loader: "file-loader",
+            options: {
+              name: "url([path][name].[ext])"
+            }
+          }
         ]
       }
     ]
