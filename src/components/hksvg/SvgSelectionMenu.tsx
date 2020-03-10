@@ -8,7 +8,6 @@ import UntitledCardPathSVG from "./paths/UntitledCardPath";
 export interface ISvgSelectionMenuProps {}
 
 const Div = styled.div`
-  height: 300px;
   background-color: white;
   color: black;
   padding: 36px;
@@ -19,6 +18,7 @@ const Div = styled.div`
 `;
 
 const MenuItem = styled.button`
+  width: 100%;
   border: 12px solid black;
   margin: 12px;
   overflow-y: hidden;

@@ -8,10 +8,6 @@ import HeaderContainer from "../layout/HeaderContainer";
 import GlobalStyles from "../layout/GlobalStyles";
 import Globs from "../hksvg/WeirdRotateAnimation";
 import SvgSelectionMenu from "../hksvg/SvgSelectionMenu";
-//import PatternSvg from "../../assets/pattern-svg.inline";
-//import svgfileurl, {
-//ReactComponent as svgFile
-//} from "../../assets/bad_heart_vertical_pattern.svg";
 
 const AppContainer = styled.div``;
 
