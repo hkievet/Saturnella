@@ -1,9 +1,7 @@
-Built this over the weekend and learned some things about svgs and styled-components as an alternative to emotion which I have gotten real comfortable using.
+# REUSABLE APP TEMPLATE
 
-todo:
+I'll be forking this one in the future.  First time making a wireframe in Illustrator and then implementing it.
 
-* fcboilerplate for styled components
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0f6832ad-8491-455e-9061-0ea56220aedd/deploy-status)](https://app.netlify.com/sites/competent-mayer-5ca6c6/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/83e86894-36c2-4a9b-8701-772b4861dafe/deploy-status)](https://app.netlify.com/sites/eager-clarke-6a698f/deploys)
-
-[Hosted on Netlify](https://eager-clarke-6a698f.netlify.com)
+[Hosted on Netlify](https://competent-mayer-5ca6c6.netlify.com)
