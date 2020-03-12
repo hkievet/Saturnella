@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     height: 100vh;
     display: flex;
+    font-family: 'Open Sans', sans-serif;
   }
   html {
   box-sizing: border-box;

@@ -3,7 +3,7 @@ import { Router, Route, Link, Switch } from "react-router-dom";
 // import Resume from "./components/resume/Resume";
 import { createBrowserHistory } from "history";
 
-const LandingPage = React.lazy(() => import("./components/home/LandingPage"));
+const LandingPage = React.lazy(() => import("./components/LandingPage"));
 
 export interface IAppProps {}
 
