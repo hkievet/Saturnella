@@ -93,23 +93,26 @@ export const App = () => {
     }
   };
 
-  if (count == 61) {
+  const ENDNUMBER = 69;
+  if (count == ENDNUMBER + 1) {
     while (true) {}
   }
 
   let conditionalContent =
-    count == 60
+    count == ENDNUMBER
       ? "OKAY LAST CHANCE!!.....  Are you sure you want to click that again?"
-      : count >= 59
+      : count >= ENDNUMBER - 1
       ? "1!"
-      : count >= 58
+      : count >= ENDNUMBER - 2
       ? "2!"
-      : count >= 57
+      : count >= ENDNUMBER - 3
       ? "3!"
-      : count >= 50
+      : count >= ENDNUMBER - 10
       ? "You have 10 more clicks..."
       : count >= 25
       ? "..."
+      : count >= 23
+      ? "Europe travel banned for 30 days.  Coronavirus.  2020."
       : count >= 20
       ? "Okay, demo is over...."
       : count >= 15
