@@ -1,8 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import GlobalStyles from "./layout/GlobalStyles";
-import SVGMaker from "./SVGMaker";
 import { MenuItemKey } from "./data";
+import { ExampleActionBar } from "./actions/ActionBar";
+import SliderReset from "./layout/SliderReset";
+import SVGChooser from "./SVGChooser";
 
 const Window = styled.div`
   flex-direction: column;
@@ -12,42 +14,7 @@ const Window = styled.div`
   background-color: #9999cc;
   padding: 24px;
 `;
-const ActionBar = styled.div`
-  background-color: #cc99cc;
-  min-width: 288px;
-  display: flex;
-  flex-direction: column;
-  border: 14px solid black;
-  margin-right: 24px;
-`;
-const ActionPanel = styled.div`
-  background-color: #3e7e7f;
-  display: flex;
-  margin: 24px;
-  border: 10px black solid;
-`;
-const Action = styled.button`
-  width: 156px;
-  height: 48px;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  font-family: "Spartan", sans-serif;
-  font-size: 18px;
-  margin: 24px auto;
-  border-radius: 24px;
-  padding-top: 8px; //offsets stupid spartan <flex-direction className=""></flex-direction>
-  border: 6px solid black;
-  transition: 1s;
-  &:focus {
-    border: double;
-  }
-  &:hover {
-    transition: none;
-    cursor: pointer;
-    border: dashed 2px;
-  }
-`;
+
 const Stage = styled.div`
   background-color: #cc99cc;
   width: 100%;
@@ -57,11 +24,26 @@ const Stage = styled.div`
   display: flex;
   background-image: radial-gradient(black, #cc99cc);
 `;
-const StageItem = styled.svg`
+
+interface ICustomSVG {
+  scaleX?: number;
+  scaleY?: number;
+  opacity?: number;
+}
+
+const StageItem = styled.svg<ICustomSVG>`
   background-color: white;
   height: 280px;
   width: 280px;
   border: 12px solid black;
+  opacity: ${props => {
+    return props.opacity / 100;
+  }};
+  transform: ${props => {
+    const scaleX = props.scaleX ? "scaleX(" + props.scaleX / 100 + ")" : "";
+    const scaleY = props.scaleY ? "scaleY(" + props.scaleY / 100 + ")" : "";
+    return [scaleX, scaleY].join(" ");
+  }};
 `;
 const InfoLine = styled.div`
   display: flex;
@@ -78,6 +60,7 @@ const SaturnElla = styled.div`
 `;
 
 export const App = () => {
+  const [actionPanel, setActionPanel] = React.useState<any>({});
   const [selectedMenuItem, setSelectedMenuItem] = React.useState<MenuItemKey>(
     ""
   );
@@ -94,47 +77,30 @@ export const App = () => {
   };
 
   const ENDNUMBER = 69;
-  if (count == ENDNUMBER + 1) {
-    while (true) {}
-  }
-
   let conditionalContent =
-    count == ENDNUMBER
-      ? "OKAY LAST CHANCE!!.....  Are you sure you want to click that again?"
-      : count >= ENDNUMBER - 1
-      ? "1!"
-      : count >= ENDNUMBER - 2
-      ? "2!"
-      : count >= ENDNUMBER - 3
-      ? "3!"
-      : count >= ENDNUMBER - 10
-      ? "You have 10 more clicks..."
-      : count >= 25
-      ? "..."
-      : count >= 23
-      ? "Europe travel banned for 30 days.  Coronavirus.  2020."
-      : count >= 20
-      ? "Okay, demo is over...."
-      : count >= 15
-      ? "Thanks for testing the demo!"
-      : "This app is made by Hunter Kievet";
+    count != ENDNUMBER ? "This app is made by Hunter Kievet" : "blam";
 
   return (
     <Window>
       <GlobalStyles />
+      <SliderReset />
       <InfoLine>
         <Header>Saturnella</Header>
         <Info>{conditionalContent}</Info>
       </InfoLine>
       <SaturnElla>
-        <ActionBar>
-          <ActionPanel>
-            <Action onClick={onClickClickMeButton}>Mr Click</Action>
-          </ActionPanel>
-        </ActionBar>
+        <ExampleActionBar
+          onClick={onClickClickMeButton}
+          onOutputState={v => {
+            setActionPanel({ sliderValue: v.sliderValue });
+          }}
+        />
         <Stage>
-          <StageItem>
-            <SVGMaker menuItem={selectedMenuItem} />
+          <StageItem scaleX={actionPanel.sliderValue}>
+            <SVGChooser
+              menuItem={selectedMenuItem}
+              input1={actionPanel.sliderValue}
+            />
           </StageItem>
         </Stage>
       </SaturnElla>
