@@ -48,6 +48,9 @@ const StageItem = styled.svg<ICustomSVG>`
 const InfoLine = styled.div`
   display: flex;
   align-items: center;
+  background-color: black;
+  border-bottom: 6px solid black;
+  padding-left: 48px;
 `;
 const Header = styled.h1`
   margin-right: 156px;
@@ -58,6 +61,9 @@ const SaturnElla = styled.div`
   width: 100%;
   height: 100%;
 `;
+
+import Ppl from "./queries/ppl";
+import CreatePpl from "./queries/CreatePpl";
 
 export const App = () => {
   const [actionPanel, setActionPanel] = React.useState<any>({});
@@ -76,10 +82,7 @@ export const App = () => {
     }
   };
 
-  const ENDNUMBER = 69;
-  let conditionalContent =
-    count != ENDNUMBER ? "This app is made by Hunter Kievet" : "blam";
-
+  let conditionalContent = <Ppl />;
   return (
     <Window>
       <GlobalStyles />
@@ -96,12 +99,7 @@ export const App = () => {
           }}
         />
         <Stage>
-          <StageItem scaleX={actionPanel.sliderValue}>
-            <SVGChooser
-              menuItem={selectedMenuItem}
-              input1={actionPanel.sliderValue}
-            />
-          </StageItem>
+          <CreatePpl />
         </Stage>
       </SaturnElla>
     </Window>
