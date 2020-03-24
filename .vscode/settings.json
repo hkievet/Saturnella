@@ -1,0 +1,16 @@
+{
+  "sqltools.connections": [
+    {
+      "askForPassword": false,
+      "database": "throwaway",
+      "dialect": "PostgreSQL",
+      "isActive": true,
+      "isConnected": true,
+      "name": "heezy!",
+      "port": 5432,
+      "server": "localhost",
+      "username": "hunterkievet"
+    }
+  ],
+  "editor.formatOnPaste": true
+}

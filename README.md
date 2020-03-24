@@ -1,13 +1,16 @@
-Untitled:
 
-Goal: create a theme switcher and utilize styled components theming with react and typescript.
+## Start database server with psql
 
-I've been using styled components for a little while, but I believe that I have been underutilizing a critical feature which is themes.  Once I wrap my head around themes I think 
+See the [./heezy_db/README.md]() file for more info on the database
 
+## Generate schema
 
-//
+## Generate mock data
 
-I really like styled-components after I implemented theming.  It definitely pales in comparison to emotion without theming.
+## Start graphile server
 
-In competition to it's less popular sibling `emotion`, `styled-components` without theming loses.
+`npx postgraphile -c  --watch -o`
 
+## Run the app with
+
+`Yarn && yarn start`
