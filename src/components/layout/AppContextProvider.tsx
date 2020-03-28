@@ -4,8 +4,9 @@ import { themes, ThemeKey, AppContext } from '../context';
 
 export interface IAppContextProviderProps {}
 
+
 export const AppContextProvider: React.FC<IAppContextProviderProps> = props => {
-  const [context, setContext] = React.useState<ThemeKey>("light")
+  const [context, setContext] = React.useState<ThemeKey>("dark")
   const updateContext = () =>{
     setContext(context === "light" ? "dark" :"light" )
   }

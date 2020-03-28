@@ -6,15 +6,15 @@ export const darkTheme: DefaultTheme = {
   borderRadius: "2px",
   logoImage: logoDark,
   colors: {
-    un: "white",
-    deux: "black",
+    un: "#cc99cc",
+    deux: "#3e7e7f",
     trois: "black",
     quatre: "black",
     cinq: "black",
     primaryText: "white",
     primaryBackground: "black",
-    secondaryText: "white",
-    secondaryBackground: "black",
+    secondaryText: "black",
+    secondaryBackground: "white",
   }
 
 }

@@ -4,17 +4,16 @@ import Slider from "./Slider";
 import { AppContext } from "../context";
 
 const ActionBar = styled.div`
-  background-color: #cc99cc;
+  background-color: ${props=>props.theme.colors.un};
   min-width: 288px;
   display: flex;
   flex-direction: column;
   border: 14px solid black;
-  border-top: none;
   margin-right: 24px;
 `;
 
 const ActionPanel = styled.div`
-  background-color: #3e7e7f;
+  background-color: ${props => props.theme.colors.deux};
   display: flex;
   flex-direction: column;
   margin: 24px;
@@ -25,8 +24,8 @@ const Action = styled.button`
   display: block;
   width: 156px;
   height: 48px;
-  background-color: white;
-  color: black;
+  background-color: ${props=>props.theme.colors.secondaryBackground};
+  color: ${props=>props.theme.colors.secondaryText};
   font-weight: bold;
   font-family: "Spartan", sans-serif;
   font-size: 18px;
@@ -60,15 +59,15 @@ export interface IActionBarProps {
 }
 
 export const ExampleActionBar: React.FC<IActionBarProps> = props => {
-  const {updateContext} = React.useContext(AppContext)
+  const { updateContext } = React.useContext(AppContext);
   React.useEffect(() => {
     props.onOutputState({ sliderValue: 50 });
   }, []);
 
-  const onToggleTheme = ()=>{
-    updateContext()
-    return 
-  }
+  const onToggleTheme = () => {
+    updateContext();
+    return;
+  };
 
   return (
     <ActionBar>

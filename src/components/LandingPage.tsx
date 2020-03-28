@@ -17,22 +17,20 @@ const Window = styled.div`
 `;
 
 const Stage = styled.div`
-  background-color: #cc99cc;
+  background-color: ${props=>props.theme.colors.un};
   width: 100%;
   border: 12px solid black;
-  border-top: none;
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: radial-gradient(black, #cc99cc);
+  background-image: radial-gradient(${props=>props.theme.colors.cinq}, ${props=>props.theme.colors.un});
 `;
 
 
 const InfoLine = styled.div`
   display: flex;
   align-items: center;
-  background-color: black;
-  border-bottom: 6px solid black;
+  background-color: ${props=>props.theme.colors.cinq};
   padding-left: 48px;
 `;
 
@@ -40,7 +38,10 @@ const Header = styled.h1`
   margin-right: 156px;
 `;
 
-const Info = styled.p``;
+const Info = styled.p`
+  color: ${props=>props.theme.colors.primaryText};
+`;
+
 const SaturnElla = styled.div`
   display: flex;
   width: 100%;
@@ -85,7 +86,7 @@ export const App = () => {
           }}
         />
         <Stage>
-          <p>nothing to see here.</p>
+          <Info>nothing to see here.</Info>
         </Stage>
       </SaturnElla>
     </Window>
