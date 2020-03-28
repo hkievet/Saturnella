@@ -2,7 +2,6 @@ import * as React from "react";
 import { Router, Route, Link, Switch } from "react-router-dom";
 // import Resume from "./components/resume/Resume";
 import { createBrowserHistory } from "history";
-import StandardCenteredDiv from "./components/views/standardCenteredDiv";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 const LandingPage = React.lazy(() => import("./components/LandingPage"));
