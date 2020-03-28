@@ -24,7 +24,6 @@ export const App: React.FC<IAppProps> = props => {
         <Router history={createBrowserHistory()}>
           <AppContextProvider>
             <Switch>
-              <Route path="/2" component={StandardCenteredDiv} exact={true} />
               <Route path="/" component={LandingPage} />
             </Switch>
           </AppContextProvider>

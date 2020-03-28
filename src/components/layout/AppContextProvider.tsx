@@ -12,7 +12,7 @@ export const AppContextProvider: React.FC<IAppContextProviderProps> = props => {
   }
 
 
-return <AppContext.Provider value={{currentTheme: "dark", updateContext}}>
+return <AppContext.Provider value={{currentTheme: context, updateContext}}>
       <ThemeProvider theme={themes[context]}>
         {props.children}
       </ThemeProvider>

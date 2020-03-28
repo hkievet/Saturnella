@@ -3,8 +3,8 @@ import 'styled-components'
 declare module 'styled-components' {
   export interface DefaultTheme {
     logoImage: string
+    planetImage: string
     borderRadius: string
-    
     // French names for our colors becaus this is DESIG
     colors: {
       // primary and secondary are text/background colorss for contrast.

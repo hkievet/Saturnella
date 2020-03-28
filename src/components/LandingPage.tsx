@@ -6,6 +6,7 @@ import { ExampleActionBar } from "./actions/ExampleActionBar";
 import SliderReset from "./layout/SliderReset";
 import SVGChooser from "./SVGChooser";
 import darkLogo from "../assets/saturnella_logo_export/160h/logo--dark.png"
+import { AppContext, themes } from "./context";
 
 const Window = styled.div`
   flex-direction: column;
@@ -50,6 +51,7 @@ const SaturnElla = styled.div`
 
 
 export const App = () => {
+  const {currentTheme} = React.useContext(AppContext);
   const [actionPanel, setActionPanel] = React.useState<any>({});
   const [selectedMenuItem, setSelectedMenuItem] = React.useState<MenuItemKey>(
     ""
@@ -67,7 +69,6 @@ export const App = () => {
     }
   };
 
-  let conditionalContent = '';
   return (
     <Window>
       <GlobalStyles />
@@ -76,7 +77,7 @@ export const App = () => {
         <Header>
           <img height="84" src={darkLogo}/>
         </Header>
-        <Info>{conditionalContent}</Info>
+        <Info>V5.0, Current Theme: {currentTheme}</Info>
       </InfoLine>
       <SaturnElla>
         <ExampleActionBar
@@ -86,7 +87,7 @@ export const App = () => {
           }}
         />
         <Stage>
-          <Info>nothing to see here.</Info>
+          <img src={themes[currentTheme].planetImage} height="666px"/>
         </Stage>
       </SaturnElla>
     </Window>

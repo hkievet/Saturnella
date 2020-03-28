@@ -13,6 +13,4 @@ export const themes = {
   dark: darkTheme,
   light: lightTheme
 };
-export const AppContext = React.createContext<Partial<ContextProps>>({
-  currentTheme: "dark"
-});
+export const AppContext = React.createContext<Partial<ContextProps>>({})
