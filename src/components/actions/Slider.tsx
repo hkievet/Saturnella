@@ -4,6 +4,7 @@ interface IOpacityProps {
   opacity?: number;
 }
 
+// The slider is cool, but it's only tested for webkit
 export const Slider = styled.input<IOpacityProps>`
   display: block;
   margin: 24px;

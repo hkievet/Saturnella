@@ -1,6 +1,7 @@
 import logoDark from '../assets/saturnella_logo_export/160h/logo--dark.png'
 import { DefaultTheme} from "styled-components";
 
+// DARK THEME
 export const darkTheme: DefaultTheme = {
   borderRadius: "2px",
   logoImage: logoDark,
@@ -9,7 +10,11 @@ export const darkTheme: DefaultTheme = {
     deux: "black",
     trois: "black",
     quatre: "black",
-    cinq: "black"
+    cinq: "black",
+    primaryText: "white",
+    primaryBackground: "black",
+    secondaryText: "white",
+    secondaryBackground: "black",
   }
 
 }

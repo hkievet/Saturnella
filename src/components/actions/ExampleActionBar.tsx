@@ -1,6 +1,7 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import Slider from "./Slider";
+import { AppContext } from "../context";
 
 const ActionBar = styled.div`
   background-color: #cc99cc;
@@ -59,19 +60,13 @@ export interface IActionBarProps {
 }
 
 export const ExampleActionBar: React.FC<IActionBarProps> = props => {
-  const [sliderState, setSliderState] = React.useState({ value: 50 });
+  const {updateContext} = React.useContext(AppContext)
   React.useEffect(() => {
     props.onOutputState({ sliderValue: 50 });
   }, []);
 
-  const onSliderChange = (value: number) => {
-    // value = value > 0 ? value : 1;
-    setSliderState({ value });
-    props.onOutputState({ sliderValue: value });
-    return;
-  };
-
   const onToggleTheme = ()=>{
+    updateContext()
     return 
   }
 
@@ -79,13 +74,6 @@ export const ExampleActionBar: React.FC<IActionBarProps> = props => {
     <ActionBar>
       <ActionPanel>
         <Action onClick={onToggleTheme}>theme</Action>
-        <Action onClick={props.onClick}>Mr Click</Action>
-        <Slider
-          id="slider"
-          type="range"
-          onChange={(e: any) => onSliderChange(e.currentTarget.value)}
-          value={sliderState.value}
-        />
       </ActionPanel>
     </ActionBar>
   );

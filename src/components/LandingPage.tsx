@@ -12,7 +12,7 @@ const Window = styled.div`
   display: flex;
   height: 100%;
   min-width: 100%;
-  background-color: #9999cc;
+  background-color: ${props=>props.theme.colors.cinq};
   padding: 24px;
 `;
 
@@ -27,26 +27,7 @@ const Stage = styled.div`
   background-image: radial-gradient(black, #cc99cc);
 `;
 
-interface ICustomSVG {
-  scaleX?: number;
-  scaleY?: number;
-  opacity?: number;
-}
 
-const StageItem = styled.svg<ICustomSVG>`
-  background-color: white;
-  height: 280px;
-  width: 280px;
-  border: 12px solid black;
-  opacity: ${props => {
-    return props.opacity / 100;
-  }};
-  transform: ${props => {
-    const scaleX = props.scaleX ? "scaleX(" + props.scaleX / 100 + ")" : "";
-    const scaleY = props.scaleY ? "scaleY(" + props.scaleY / 100 + ")" : "";
-    return [scaleX, scaleY].join(" ");
-  }};
-`;
 const InfoLine = styled.div`
   display: flex;
   align-items: center;
@@ -54,9 +35,11 @@ const InfoLine = styled.div`
   border-bottom: 6px solid black;
   padding-left: 48px;
 `;
+
 const Header = styled.h1`
   margin-right: 156px;
 `;
+
 const Info = styled.p``;
 const SaturnElla = styled.div`
   display: flex;
@@ -64,8 +47,6 @@ const SaturnElla = styled.div`
   height: 100%;
 `;
 
-import Ppl from "./queries/ppl";
-import CreatePpl from "./queries/CreatePpl";
 
 export const App = () => {
   const [actionPanel, setActionPanel] = React.useState<any>({});
@@ -75,9 +56,6 @@ export const App = () => {
 
   const [count, setCount] = React.useState<number>(0);
 
-  const apps = {
-    "createppl": CreatePpl
-  }
 
   const onClickClickMeButton = () => {
     setCount(count + 1);

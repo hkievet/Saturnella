@@ -7,10 +7,20 @@ declare module 'styled-components' {
     
     // French names for our colors becaus this is DESIG
     colors: {
+      // primary and secondary are text/background colorss for contrast.
+      primaryText: string
+      primaryBackground: string
+      secondaryText: string
+      secondaryBackground: string
+      // stage color, action bar
       un: string
+      // actions
       deux: string
+      // ?
       trois: string
+      // ?
       quatre: string
+      // background color
       cinq: string
     }
   }

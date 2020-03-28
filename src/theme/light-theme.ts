@@ -9,6 +9,10 @@ export const lightTheme: DefaultTheme = {
     deux: "black",
     trois: "black",
     quatre: "black",
-    cinq: "black"
+    cinq: "white",
+    primaryText: "black",
+    primaryBackground: "white",
+    secondaryText: "white",
+    secondaryBackground: "black",
   }
 }
