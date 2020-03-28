@@ -63,7 +63,7 @@ module.exports = {
       },
       {
         //  handle fonts in the scss loader
-        test: /\.(woff2?|ttf|otf|eot)$/,
+        test: /\.(woff2?|ttf|otf|eot|png)$/,
         exclude: /node_modules/,
         loader: "file-loader",
         options: {

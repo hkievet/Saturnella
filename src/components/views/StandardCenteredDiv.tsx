@@ -1,12 +1,12 @@
 import * as React from "react";
-import { myTheme } from "../../theme/my-theme";
+import { lightTheme } from "../../theme/light-theme";
 import styled, {
   createGlobalStyle,
   css,
   ThemeProvider
 } from "styled-components";
 
-import { blackTheme } from "../../theme/black-theme";
+import { darkTheme } from "../../theme/dark-theme";
 import GlobalStyles from "../layout/GlobalStyles";
 export const MyComponent = styled.div`
   color: ${props => props.theme.colors.main};
@@ -28,10 +28,10 @@ export interface IStandardCenteredDivProps {}
 
 export const StandardCenteredDiv: React.FC<IStandardCenteredDivProps> = props => {
   return (
-    <ThemeProvider theme={blackTheme}>
+    <ThemeProvider theme={darkTheme}>
       <GlobalStyles />
       <div>
-        <MyComponent>Test</MyComponent>
+        <img height="84" src={darkTheme.logoImage} />
       </div>
     </ThemeProvider>
   );

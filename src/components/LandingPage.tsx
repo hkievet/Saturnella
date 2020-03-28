@@ -5,6 +5,7 @@ import { MenuItemKey } from "./data";
 import { ExampleActionBar } from "./actions/ActionBar";
 import SliderReset from "./layout/SliderReset";
 import SVGChooser from "./SVGChooser";
+import darkLogo from "../assets/saturnella_logo_export/160h/logo--dark.png"
 
 const Window = styled.div`
   flex-direction: column;
@@ -19,6 +20,7 @@ const Stage = styled.div`
   background-color: #cc99cc;
   width: 100%;
   border: 12px solid black;
+  border-top: none;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -73,6 +75,10 @@ export const App = () => {
 
   const [count, setCount] = React.useState<number>(0);
 
+  const apps = {
+    "createppl": CreatePpl
+  }
+
   const onClickClickMeButton = () => {
     setCount(count + 1);
     if (selectedMenuItem === "svg") {
@@ -88,7 +94,9 @@ export const App = () => {
       <GlobalStyles />
       <SliderReset />
       <InfoLine>
-        <Header>Saturnella</Header>
+        <Header>
+          <img height="84" src={darkLogo}/>
+        </Header>
         <Info>{conditionalContent}</Info>
       </InfoLine>
       <SaturnElla>

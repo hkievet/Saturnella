@@ -8,6 +8,7 @@ const ActionBar = styled.div`
   display: flex;
   flex-direction: column;
   border: 14px solid black;
+  border-top: none;
   margin-right: 24px;
 `;
 
