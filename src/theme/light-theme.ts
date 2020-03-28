@@ -1,11 +1,14 @@
 import { DefaultTheme } from "styled-components";
-import logoDark from '../assets/saturnella_logo_export/160h/logo--light.png'
+import logoLight from '../assets/saturnella_logo_export/160h/logo--light.png'
 
 export const lightTheme: DefaultTheme = {
   borderRadius: '5px',
-  logoImage:logoDark,
+  logoImage:logoLight,
   colors: {
-    main: 'cyan',
-    secondary: 'magenta',
+    un: "white",
+    deux: "black",
+    trois: "black",
+    quatre: "black",
+    cinq: "black"
   }
 }

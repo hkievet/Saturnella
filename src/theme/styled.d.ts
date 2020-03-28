@@ -5,9 +5,13 @@ declare module 'styled-components' {
     logoImage: string
     borderRadius: string
     
+    // French names for our colors becaus this is DESIG
     colors: {
-      main: string
-      secondary: string
+      un: string
+      deux: string
+      trois: string
+      quatre: string
+      cinq: string
     }
   }
 }

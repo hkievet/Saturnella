@@ -3,18 +3,19 @@ import { lightTheme } from "../../theme/light-theme";
 import styled, {
   createGlobalStyle,
   css,
-  ThemeProvider
+  ThemeProvider,
+  ThemeContext
 } from "styled-components";
 
 import { darkTheme } from "../../theme/dark-theme";
 import GlobalStyles from "../layout/GlobalStyles";
 export const MyComponent = styled.div`
-  color: ${props => props.theme.colors.main};
+  color: ${props => props.theme.colors.un};
 `;
 
 export const MyGlobalStyle = createGlobalStyle`
   body {
-    background-color: ${props => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.deux};
   }
 `;
 
@@ -27,13 +28,14 @@ export const cssHelper = css`
 export interface IStandardCenteredDivProps {}
 
 export const StandardCenteredDiv: React.FC<IStandardCenteredDivProps> = props => {
+  const themeContext = React.useContext(ThemeContext)
   return (
-    <ThemeProvider theme={darkTheme}>
+    <>
       <GlobalStyles />
       <div>
-        <img height="84" src={darkTheme.logoImage} />
+        <img height="84" src={themeContext.logoImage} />
       </div>
-    </ThemeProvider>
+    </>
   );
 };
 

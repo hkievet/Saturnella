@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import GlobalStyles from "./layout/GlobalStyles";
 import { MenuItemKey } from "./data";
-import { ExampleActionBar } from "./actions/ActionBar";
+import { ExampleActionBar } from "./actions/ExampleActionBar";
 import SliderReset from "./layout/SliderReset";
 import SVGChooser from "./SVGChooser";
 import darkLogo from "../assets/saturnella_logo_export/160h/logo--dark.png"
@@ -88,7 +88,7 @@ export const App = () => {
     }
   };
 
-  let conditionalContent = <Ppl />;
+  let conditionalContent = '';
   return (
     <Window>
       <GlobalStyles />
@@ -107,7 +107,7 @@ export const App = () => {
           }}
         />
         <Stage>
-          <CreatePpl />
+          <p>nothing to see here.</p>
         </Stage>
       </SaturnElla>
     </Window>
