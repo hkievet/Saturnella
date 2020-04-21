@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 export interface IDesignSvgProps {}
-export const DesignSvg: React.FC<IDesignSvgProps> = props => {
+export const DesignSvg: React.FC<IDesignSvgProps> = (props) => {
   return (
     <svg viewBox="0 0 144 144">
       <defs>
@@ -158,14 +158,7 @@ export const DesignSvg: React.FC<IDesignSvgProps> = props => {
           stroke="#000"
           strokeMiterlimit="10"
         />
-        <circle
-          cx="18.64"
-          cy="92.19"
-          r="2.82"
-          fill="#838bc5"
-          stroke="#000"
-          strokeMiterlimit="10"
-        />
+        <circle cx="18.64" cy="92.19" r="2.82" fill="#838bc5" stroke="#000" strokeMiterlimit="10" />
         <rect
           x="13.57"
           y="123"
@@ -225,14 +218,7 @@ export const DesignSvg: React.FC<IDesignSvgProps> = props => {
           stroke="#000"
           strokeMiterlimit="10"
         />
-        <circle
-          cx="87.93"
-          cy="86.3"
-          r="6.68"
-          fill="#c9c"
-          stroke="#000"
-          strokeMiterlimit="10"
-        />
+        <circle cx="87.93" cy="86.3" r="6.68" fill="#c9c" stroke="#000" strokeMiterlimit="10" />
         <circle
           cx="110.83"
           cy="88.72"
@@ -249,22 +235,8 @@ export const DesignSvg: React.FC<IDesignSvgProps> = props => {
           stroke="#000"
           strokeMiterlimit="10"
         />
-        <circle
-          cx="98.4"
-          cy="82.06"
-          r="2.44"
-          fill="#65c8d0"
-          stroke="#000"
-          strokeMiterlimit="10"
-        />
-        <circle
-          cx="89.16"
-          cy="64.98"
-          r="9.85"
-          fill="#c9c"
-          stroke="#000"
-          strokeMiterlimit="10"
-        />
+        <circle cx="98.4" cy="82.06" r="2.44" fill="#65c8d0" stroke="#000" strokeMiterlimit="10" />
+        <circle cx="89.16" cy="64.98" r="9.85" fill="#c9c" stroke="#000" strokeMiterlimit="10" />
       </g>
     </svg>
   );

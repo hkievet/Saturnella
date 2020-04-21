@@ -1,1 +1,1 @@
-export type MenuItemKey = "svg" | "hello" | ""
+export type MenuItemKey = 'svg' | 'hello' | '';

@@ -1,27 +1,27 @@
-import 'styled-components'
+import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    logoImage: string
-    planetImage: string
-    borderRadius: string
+    logoImage: string;
+    planetImage: string;
+    borderRadius: string;
     // French names for our colors becaus this is DESIG
     colors: {
       // primary and secondary are text/background colorss for contrast.
-      primaryText: string
-      primaryBackground: string
-      secondaryText: string
-      secondaryBackground: string
+      primaryText: string;
+      primaryBackground: string;
+      secondaryText: string;
+      secondaryBackground: string;
       // stage color, action bar
-      un: string
+      un: string;
       // actions
-      deux: string
+      deux: string;
       // ?
-      trois: string
+      trois: string;
       // ?
-      quatre: string
+      quatre: string;
       // background color
-      cinq: string
-    }
+      cinq: string;
+    };
   }
 }

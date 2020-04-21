@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IOpacityProps {
   opacity?: number;
@@ -9,7 +9,7 @@ export const Slider = styled.input<IOpacityProps>`
   display: block;
   margin: 24px;
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  opacity: ${props => {
+  opacity: ${(props) => {
     return props.opacity || 1;
   }};
   &::-webkit-slider-thumb {

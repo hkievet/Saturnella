@@ -1,10 +1,10 @@
-import * as React from "react";
-import styled, { ThemeContext } from "styled-components";
-import Slider from "./Slider";
-import { AppContext } from "../context";
+import * as React from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import Slider from './Slider';
+import { AppContext } from '../context';
 
 const ActionBar = styled.div`
-  background-color: ${props=>props.theme.colors.un};
+  background-color: ${(props) => props.theme.colors.un};
   min-width: 288px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ const ActionBar = styled.div`
 `;
 
 const ActionPanel = styled.div`
-  background-color: ${props => props.theme.colors.deux};
+  background-color: ${(props) => props.theme.colors.deux};
   display: flex;
   flex-direction: column;
   margin: 24px;
@@ -24,10 +24,10 @@ const Action = styled.button`
   display: block;
   width: 156px;
   height: 48px;
-  background-color: ${props=>props.theme.colors.secondaryBackground};
-  color: ${props=>props.theme.colors.secondaryText};
+  background-color: ${(props) => props.theme.colors.secondaryBackground};
+  color: ${(props) => props.theme.colors.secondaryText};
   font-weight: bold;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Spartan', sans-serif;
   font-size: 18px;
   margin: 24px auto;
   border-radius: 24px;
@@ -58,7 +58,7 @@ export interface IActionBarProps {
   onOutputState: (state: IDataState) => void;
 }
 
-export const ExampleActionBar: React.FC<IActionBarProps> = props => {
+export const ExampleActionBar: React.FC<IActionBarProps> = (props) => {
   const { updateContext } = React.useContext(AppContext);
   React.useEffect(() => {
     props.onOutputState({ sliderValue: 50 });

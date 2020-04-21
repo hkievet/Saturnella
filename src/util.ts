@@ -1,2 +1,1 @@
-export const logSomething = (something: string) => {
-}
+export const logSomething = (something: string) => {};

@@ -1,11 +1,13 @@
-import { gql } from "apollo-boost"
+import { gql } from 'apollo-boost';
 
-export const allPeopleQuery = gql`{
-  query {
-    allPeople {
-      nodes {
-        name
+export const allPeopleQuery = gql`
+  {
+    query {
+      allPeople {
+        nodes {
+          name
+        }
       }
     }
   }
-}`
+`;

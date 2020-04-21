@@ -1,9 +1,9 @@
-import { darkTheme } from "../theme/dark-theme";
-import { lightTheme } from "../theme/light-theme";
+import { darkTheme } from '../theme/dark-theme';
+import { lightTheme } from '../theme/light-theme';
 
-import * as React from "react";
+import * as React from 'react';
 
-export type ThemeKey = "dark" | "light";
+export type ThemeKey = 'dark' | 'light';
 
 type ContextProps = {
   currentTheme: ThemeKey;
@@ -11,6 +11,6 @@ type ContextProps = {
 };
 export const themes = {
   dark: darkTheme,
-  light: lightTheme
+  light: lightTheme,
 };
-export const AppContext = React.createContext<Partial<ContextProps>>({})
+export const AppContext = React.createContext<Partial<ContextProps>>({});

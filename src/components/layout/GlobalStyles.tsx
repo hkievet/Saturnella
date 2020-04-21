@@ -1,5 +1,5 @@
-import * as React from "react";
-import { createGlobalStyle } from "styled-components";
+import * as React from 'react';
+import { createGlobalStyle } from 'styled-components';
 
 export interface IGlobalStylesProps {}
 
