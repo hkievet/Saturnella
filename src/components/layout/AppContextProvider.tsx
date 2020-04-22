@@ -5,9 +5,10 @@ import { themes, ThemeKey, AppContext } from '../context';
 export interface IAppContextProviderProps {}
 
 export const AppContextProvider: React.FC<IAppContextProviderProps> = (props) => {
-  const [context, setContext] = React.useState<ThemeKey>('dark');
+  const [context, setContext] = React.useState<ThemeKey>('saturnella');
   const updateContext = () => {
-    setContext(context === 'light' ? 'dark' : 'light');
+    // for mutliple themes.
+    setContext('saturnella');
   };
 
   return (

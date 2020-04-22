@@ -1,16 +1,13 @@
-import { darkTheme } from '../theme/dark-theme';
-import { lightTheme } from '../theme/light-theme';
-
 import * as React from 'react';
+import { saturnellaTheme } from '../theme/saturnella-theme';
 
-export type ThemeKey = 'dark' | 'light';
+export type ThemeKey = 'saturnella';
 
 type ContextProps = {
   currentTheme: ThemeKey;
   updateContext: () => void;
 };
 export const themes = {
-  dark: darkTheme,
-  light: lightTheme,
+  saturnella: saturnellaTheme,
 };
 export const AppContext = React.createContext<Partial<ContextProps>>({});

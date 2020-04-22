@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 
 import ApolloClient from 'apollo-boost';
 import AppContextProvider from './components/layout/AppContextProvider';
+import GlobalStyles from './components/layout/GlobalStyles';
 
 const LandingPage = React.lazy(() => import('./components/LandingPage'));
 
@@ -20,6 +21,7 @@ export const App: React.FC<IAppProps> = (props) => {
       <React.Suspense fallback={<div>loading...</div>}>
         <Router history={createBrowserHistory()}>
           <AppContextProvider>
+            <GlobalStyles />
             <Switch>
               <Route path="/" component={LandingPage} />
             </Switch>

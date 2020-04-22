@@ -1,11 +1,10 @@
-import * as React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 export interface IGlobalStylesProps {}
 
 const GlobalStyles = createGlobalStyle`
   body {
-    background-color: #04080C;
+    background-color: ${(props) => props.theme.colors.backgroundColor.hex()};
     color: white;
     font-size: 16px;
     margin: 0;
@@ -13,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     display: flex;
     font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient( to right, #BEB27F, #BE7FA7, #80B1B5 );
   }
   html {
   box-sizing: border-box;
