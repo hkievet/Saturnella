@@ -4,7 +4,7 @@ import { saturnellaTheme } from '../theme/saturnella-theme';
 export type ThemeKey = 'saturnella';
 
 type ContextProps = {
-  currentTheme: ThemeKey;
+  themeKey: ThemeKey;
   updateContext: () => void;
 };
 export const themes = {

@@ -1,10 +1,10 @@
 import { DefaultTheme } from 'styled-components';
-import logoDark from '../assets/saturnella_logo_export/160h/logo--dark.png';
+import logo from '../assets/logo_purple.png';
 import colors from './colors';
 
 // DARK THEME
 export const saturnellaTheme: DefaultTheme = {
-  logoImage: logoDark,
+  logoImage: logo,
   colors: {
     primaryText: colors.yellowLight,
     primaryTextBold: colors.yellowBold,

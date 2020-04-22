@@ -1,17 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
-
-const Window = styled.div`
-  flex-direction: column;
-  display: flex;
-  height: 100%;
-  min-width: 100%;
-  background-color: ${(props) => props.theme.colors.backgroundColor.hex()};
-  padding: 24px;
-`;
+import { AppContext, themes } from './context';
 
 export const LandingPage = () => {
-  return <Window />;
+  const { themeKey: currentTheme } = React.useContext(AppContext);
+  return (
+    <div>
+      <img src={themes[currentTheme].logoImage} alt="logo" />
+    </div>
+  );
 };
 
 export default LandingPage;
