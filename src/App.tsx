@@ -1,15 +1,12 @@
 import * as React from 'react';
-import { Router, Route, Link, Switch } from 'react-router-dom';
-// import Resume from "./components/resume/Resume";
+import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import StandardCenteredDiv from './components/views/standardCenteredDiv';
 import { ApolloProvider } from '@apollo/react-hooks';
 
-const LandingPage = React.lazy(() => import('./components/LandingPage'));
-
 import ApolloClient from 'apollo-boost';
-import { ThemeProvider } from 'styled-components';
 import AppContextProvider from './components/layout/AppContextProvider';
+
+const LandingPage = React.lazy(() => import('./components/LandingPage'));
 
 export const myClient = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
